@@ -32,15 +32,15 @@ Este es un proyecto simple de Spring Boot que muestra un mensaje "¡Hola Mundo!"
    git init
    ```
 
-2. Renombrar la rama principal a 'main':
+2. Renombrar la rama principal a 'master':
    ```bash
-   git branch -M main
+   git branch -M master
    ```
 
 3. Crear el archivo README.md y realizar el primer commit:
    ```bash
    git add README.md
-   git commit -m "Initial commit: Add README.md"
+   git commit -m "chore: Create a readme and stablish branch named master"
    ```
 
 ### Creación de rama de desarrollo
@@ -65,5 +65,7 @@ Este es un proyecto simple de Spring Boot que muestra un mensaje "¡Hola Mundo!"
 
 ## Referencias
 
-- [Git Switch vs Checkout](https://git-scm.com/docs/git-switch)
+- [Git Checkout](https://git-scm.com/docs/git-checkout) 
+- [Git Switch ](https://git-scm.com/docs/git-switch)
 - [Git Restore](https://git-scm.com/docs/git-restore)
+- [Git Switch vs Checkout](https://linuxhandbook.com/git-switch-checkout/)
