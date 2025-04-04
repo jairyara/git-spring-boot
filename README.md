@@ -1,6 +1,6 @@
-# Spring Boot Hello World
+# Spring Core Hello World
 
-Este es un proyecto simple de Spring Boot que muestra un mensaje "¡Hola Mundo!" cuando accedes a la ruta principal.
+Este es un proyecto simple de Java con Spring que muestra un mensaje "¡Hola Mundo!" en la consola.
 
 ## Requisitos
 
@@ -11,16 +11,19 @@ Este es un proyecto simple de Spring Boot que muestra un mensaje "¡Hola Mundo!"
 
 1. Clona el repositorio
 2. Navega al directorio del proyecto
-3. Ejecuta el proyecto con Maven:
+3. Compila y ejecuta el proyecto con Maven:
    ```bash
-   mvn spring-boot:run
+   mvn clean package
+   java -jar target/demo-0.0.1-SNAPSHOT.jar
    ```
-4. Abre tu navegador y visita: http://localhost:8080
 
 ## Estructura del proyecto
 
-- `src/main/java/itc/edu/co/demo/DemoApplication.java` - Clase principal de la aplicación
-- `src/main/java/itc/edu/co/demo/controller/HelloController.java` - Controlador REST que maneja las peticiones
+- `src/main/java/itc/edu/co/demo/Main.java` - Clase principal que inicia la aplicación
+- `src/main/java/itc/edu/co/demo/model/Mensaje.java` - Clase modelo que contiene el mensaje
+- `src/main/java/itc/edu/co/demo/service/MensajeService.java` - Interfaz del servicio de mensajes
+- `src/main/java/itc/edu/co/demo/service/MensajeServiceImpl.java` - Implementación del servicio
+- `src/main/resources/applicationContext.xml` - Configuración de Spring
 - `pom.xml` - Archivo de configuración de Maven con las dependencias del proyecto
 
 ## Instrucciones de Git
@@ -52,6 +55,23 @@ Este es un proyecto simple de Spring Boot que muestra un mensaje "¡Hola Mundo!"
    ```
 
    > Nota: Se utiliza `git switch` en lugar de `git checkout` para seguir el principio de responsabilidad única, ya que `switch` está específicamente diseñado para cambiar entre ramas.
+
+### Borrar orígenes en Git
+
+1. Ver los orígenes actuales:
+   ```bash
+   git remote -v
+   ```
+
+2. Borrar un origen específico:
+   ```bash
+   git remote remove origin
+   ```
+
+3. Verificar que se haya eliminado:
+   ```bash
+   git remote -v
+   ```
 
 ### Pull Request
 
