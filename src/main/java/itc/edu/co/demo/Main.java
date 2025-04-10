@@ -1,7 +1,7 @@
 package itc.edu.co.demo;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import itc.edu.co.demo.service.MensajeService;
 
@@ -10,8 +10,8 @@ import itc.edu.co.demo.service.MensajeService;
  */
 public class Main {
     public static void main(String[] args) {
-        // Cargar el contexto de Spring desde XML
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        // Cargar el contexto de Spring usando anotaciones
+        ApplicationContext context = new AnnotationConfigApplicationContext("itc.edu.co.demo");
         
         // Obtener el servicio de mensajes desde el contexto
         MensajeService mensajeService = context.getBean(MensajeService.class);
@@ -20,6 +20,6 @@ public class Main {
         System.out.println("Mensaje del servicio: " + mensajeService.getMensaje());
         
         // Cerrar el contexto
-        ((ClassPathXmlApplicationContext) context).close();
+        ((AnnotationConfigApplicationContext) context).close();
     }
 } 
